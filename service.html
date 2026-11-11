@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Request equipment support | Helios Equipment Services</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="masthead"><div class="wrap bar">
+    <a class="brand" href="index.html"><span aria-hidden="true">H</span>Helios Equipment Services</a>
+    <nav aria-label="Customer services"><a href="sales.html">Sales enquiry</a><a href="service.html">Service request</a></nav>
+  </div></header>
+  <main class="wrap">
+    <div class="hero"><p class="eyebrow">Service request</p><h1>Request equipment support</h1><p>Support for industrial cooling and compressed-air equipment, maintenance and billing. Use your existing HES contact email so we can match your request where possible.</p></div>
+    <form class="card" method="post" action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&amp;orgId=00DgK00000bWffT" accept-charset="UTF-8">
+      <input type="hidden" name="orgid" value="00DgK00000bWffT">
+      <input type="hidden" name="retURL" value="https://samin-bjit-10.github.io/hes-intake/submitted.html">
+      <input type="hidden" name="origin" value="Web">
+      <p class="muted">Fields marked <span class="required">*</span> are required. Include enough detail for our service team to assess your request.</p>
+      <fieldset><legend>Contact information</legend><div class="grid">
+      <label>Full name <span class="required">*</span><input type="text" name="name" required maxlength="80" autocomplete="name"></label>
+      <label>Work email <span class="required">*</span><input type="email" name="email" required maxlength="80" autocomplete="email"></label>
+      <label>Company<input type="text" name="company" maxlength="80" autocomplete="organization"></label>
+      <label>Phone<input type="tel" name="phone" maxlength="40" autocomplete="tel"></label>
+    </div></fieldset>
+    <fieldset><legend>Request details</legend><div class="grid">
+      <label>Request type <span class="required">*</span><select name="recordType" required>
+        <option value="">Select a type</option><option value="012gK000006RKon">Technical support</option><option value="012gK000006RKs1">Billing enquiry</option>
+      </select></label>
+      <label>Priority <span class="required">*</span><select name="priority" required>
+        <option value="">Select a priority</option><option value="High">High — equipment down or work stopped</option><option value="Medium">Medium — work is affected</option><option value="Low">Low — general enquiry</option>
+      </select></label></div>
+      <label>Subject <span class="required">*</span><input type="text" name="subject" required maxlength="80"></label>
+      <label>What do you need help with? <span class="required">*</span><textarea name="description" rows="5" maxlength="4000" required placeholder="For technical support, include the chiller or compressor model, serial number, fault symptoms and site country/postcode. For billing, include the invoice reference and your question."></textarea></label>
+    </fieldset>
+      <input type="hidden" name="captcha_settings" value='{"keyname":"HES_Web_Forms","fallback":"true","orgId":"00DgK00000bWffT","ts":""}'>
+<div class="g-recaptcha" data-sitekey="6LcyEhsuAAAAAMM-GUgTi5Av34rpDOwtF5t5TWei"></div>
+      <button type="submit">Submit service request</button>
+    </form>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+<script>
+ function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500); 
+</script>
+  </main>
+  <footer class="wrap">Helios Equipment Services · Salesforce project demonstration</footer>
+</body>
+</html>
